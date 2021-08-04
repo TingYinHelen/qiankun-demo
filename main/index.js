@@ -4,27 +4,33 @@ import render from './render/VueRender.js';
 import './index.less';
 
 render({ loading: true });
+const loader = (loading) => {
+    render({ loading });
+};
 
 // 注册子应用
 registerMicroApps([
-    {
-        name: 'react',
-        entry: '//localhost:7100',
-        container: '#subapp-viewport',
-        activeRule: '/react',
-    },
+    // {
+    //     name: 'react',
+    //     entry: '//localhost:7100',
+    //     container: '#subapp-viewport',
+    //     activeRule: '/react',
+    //     loader,
+    // },
     {
         name: 'vue',
         entry: '//localhost:7101',
         container: '#subapp-viewport',
         activeRule: '/vue',
+        loader,
     },
-    {
-        name: 'pure',
-        entry: '//localhost:7104',
-        container: '#subapp-viewport',
-        activeRule: '/pure',
-    },
+    // {
+    //     name: 'pure',
+    //     entry: '//localhost:7104',
+    //     container: '#subapp-viewport',
+    //     activeRule: '/pure',
+    //     loader,
+    // },
 ], {
     beforeLoad: [
         app => {
@@ -59,7 +65,7 @@ setGlobalState({
 });
 
 // 设置默认进入的子应用
-setDefaultMountApp('/react16');
+setDefaultMountApp('/vue');
 
 // 启动 qiankun
 start();
