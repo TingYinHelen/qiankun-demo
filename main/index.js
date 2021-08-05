@@ -10,13 +10,13 @@ const loader = (loading) => {
 
 // 注册子应用
 registerMicroApps([
-    // {
-    //     name: 'react',
-    //     entry: '//localhost:7100',
-    //     container: '#subapp-viewport',
-    //     activeRule: '/react',
-    //     loader,
-    // },
+    {
+        name: 'react',
+        entry: '//localhost:7100',
+        container: '#subapp-viewport',
+        activeRule: '/react',
+        loader,
+    },
     {
         name: 'vue',
         entry: '//localhost:7101',
@@ -24,13 +24,13 @@ registerMicroApps([
         activeRule: '/vue',
         loader,
     },
-    // {
-    //     name: 'pure',
-    //     entry: '//localhost:7104',
-    //     container: '#subapp-viewport',
-    //     activeRule: '/pure',
-    //     loader,
-    // },
+    {
+        name: 'purehtml',
+        entry: '//localhost:7104',
+        container: '#subapp-viewport',
+        loader,
+        activeRule: '/purehtml',
+    },
 ], {
     beforeLoad: [
         app => {

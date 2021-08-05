@@ -1,0 +1,16 @@
+{
+  "name": "app3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "start": "cross-env PORT=7104 http-server . --cors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Helen",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "http-server": "^0.12.3"
+  }
+}
